@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dueña | Confecciones Lina</title>
+    <meta
+      name="description"
+      content="Panel privado de la dueña para publicar productos y ver usuarios registrados."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar container">
+        <a class="brand" href="index.html">Lina</a>
+        <div class="nav-links">
+          <a href="index.html#catalogo">Catálogo</a>
+          <a href="gallery.html">Galería</a>
+          <a href="cart.html">Carrito</a>
+          <a href="index.html#ubicacion">Ubicación</a>
+        </div>
+        <div class="nav-actions">
+          <a href="index.html" class="secondary-btn">Volver a la tienda</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section container owner-page" id="ownerPage">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Panel privado</p>
+            <h2>Publica productos nuevos</h2>
+          </div>
+          <button id="ownerLogoutBtn" class="secondary-btn">Cerrar sesión</button>
+        </div>
+
+        <div class="owner-grid">
+          <form id="productForm" class="owner-form">
+            <label class="field">
+              <span>Nombre de la prenda</span>
+              <input type="text" id="productName" required placeholder="Ej. Vestido de lino" />
+            </label>
+            <label class="field">
+              <span>Precio (colones)</span>
+              <input type="number" id="productPrice" required min="1" step="1" placeholder="799" />
+            </label>
+            <label class="field">
+              <span>Categoría</span>
+              <input type="text" id="productCategory" required placeholder="Ej. Vestidos" />
+            </label>
+            <label class="field">
+              <span>Foto del producto</span>
+              <input type="file" id="productImageFile" accept="image/*" />
+              <input type="url" id="productImage" placeholder="O pega una URL de imagen" />
+            </label>
+            <button type="submit" class="primary-btn">Publicar producto</button>
+            <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+          </form>
+
+          <div class="owner-preview">
+            <h3>Vista previa</h3>
+            <p>Tu producto aparecerá automáticamente en el catálogo cuando publiques.</p>
+            <div id="ownerPreviewCard" class="owner-preview-card">
+              <div id="ownerPreviewImage" class="owner-preview-image"></div>
+              <div class="owner-preview-info">
+                <p class="eyebrow" id="ownerPreviewCategory">Categoría</p>
+                <h4 id="ownerPreviewName">Nombre del producto</h4>
+                <strong id="ownerPreviewPrice">₡0</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="owner-registrations">
+            <h3>Usuarios registrados</h3>
+            <div id="registeredUsers" class="registered-users">
+              <p>No hay usuarios registrados aún.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

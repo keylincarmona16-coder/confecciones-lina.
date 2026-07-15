@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito | Confecciones Lina</title>
+    <meta
+      name="description"
+      content="Revisa y confirma tu carrito de compras en Lina."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar container">
+        <a class="brand" href="index.html">Lina</a>
+        <div class="nav-links">
+          <a href="index.html#catalogo">Catálogo</a>
+          <a href="gallery.html">Galería</a>
+          <a href="cart.html">Carrito</a>
+          <a href="index.html#ubicacion">Ubicación</a>
+        </div>
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌙</button>
+          <button id="loginBtn" class="secondary-btn">Iniciar sesión</button>
+          <a class="cart-btn" href="cart.html">🛒 <span id="cartCount">0</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section container" id="cartPage">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Carrito</p>
+            <h2>Revisa tus productos antes de pagar</h2>
+          </div>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+          <strong>Total: <span id="cartTotal">$0</span></strong>
+          <button id="checkoutBtn" class="primary-btn">Pagar ahora</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="loginModal" class="modal hidden">
+      <div class="modal-card">
+        <button class="close-btn" id="closeLogin">×</button>
+        <h3 id="authTitle">Ingreso de usuario</h3>
+        <p id="authInfo">Ingresa tu usuario. Si no tienes cuenta, regístrate.</p>
+        <form id="loginForm">
+          <div class="field">
+            <label for="loginUsername">Usuario</label>
+            <input type="text" id="loginUsername" placeholder="Usuario" required autocomplete="username" />
+          </div>
+          <div class="field hidden" id="passwordGroup">
+            <label for="loginPassword">Contraseña</label>
+            <div class="password-field">
+              <input type="password" id="loginPassword" placeholder="Contraseña" autocomplete="current-password" />
+              <button type="button" id="togglePassword" class="secondary-btn">Mostrar</button>
+            </div>
+          </div>
+          <div class="login-actions">
+            <button type="submit" class="primary-btn" id="submitButton">Ingresar</button>
+            <button type="button" class="secondary-btn" id="toggleRegister">Registrarse</button>
+          </div>
+          <p id="loginError" class="form-feedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

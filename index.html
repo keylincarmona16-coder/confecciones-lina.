@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lina | Tienda de Ropa</title>
+    <meta
+      name="description"
+      content="Tienda de ropa moderna con catálogo, pedidos en línea, favoritos y pagos digitales."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar container">
+        <a class="brand" href="#inicio">Lina</a>
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#quienes">¿Quiénes somos?</a>
+          <a href="gallery.html">Galería</a>
+          <a href="#ubicacion">Ubicación</a>
+        </div>
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌙</button>
+          <button id="loginBtn" class="secondary-btn">Iniciar sesión</button>
+          <a id="cartBtn" class="cart-btn" href="cart.html">🛒 <span id="cartCount">0</span></a>
+        </div>
+      </nav>
+
+      <section class="hero-content container" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">Nueva colección 2026</p>
+          <h1>Estilo urbano para cada momento del día.</h1>
+          <p>
+            Descubre prendas modernas, cómodas y elegantes con pedidos en línea,
+            pagos rápidos y entrega ágil.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalogo" class="primary-btn">Ver catálogo</a>
+            <a href="https://wa.me/5215512345678?text=Hola%20quiero%20hacer%20un%20pedido" class="ghost-btn">Pedir por WhatsApp</a>
+          </div>
+          <div class="hero-badges">
+            <span>⚡ Envíos rápidos</span>
+            <span>💳 Pago seguro</span>
+            <span>⭐ Opiniones reales</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Modelo con estilo urbano" />
+          <div class="hero-card-info">
+            <h3>Lo más vendido</h3>
+            <p>Conjunto premium en tonos neutros</p>
+            <strong>₡1.299</strong>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="catalogo" class="section container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Catálogo con precios</p>
+            <h2>Encuentra tu próxima prenda favorita</h2>
+          </div>
+          <div class="controls">
+            <input id="searchInput" type="search" placeholder="Buscar prendas..." />
+            <button id="favoritesToggle" class="secondary-btn">Mostrar favoritos</button>
+          </div>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+
+      <section class="section container about" id="quienes">
+        <div class="about-copy">
+          <p class="eyebrow">¿Quiénes somos?</p>
+          <h2>Una tienda pensada para quienes aman verse bien sin complicarse.</h2>
+          <p>
+            Lina nace para ofrecer ropa actual, cómoda y con personalidad. Cada
+            pieza combina líneas elegantes, calidad y un toque premium que se ve
+a simple vista.
+          </p>
+          <ul>
+            <li>Diseños modernos y versátiles</li>
+            <li>Atención personalizada</li>
+            <li>Pedidos en línea y pagos seguros</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>¿Por qué elegir Lina?</h3>
+          <div class="metric"><strong>4.9/5</strong><span>Calificación de clientes</span></div>
+          <div class="metric"><strong>24h</strong><span>Respuesta por WhatsApp</span></div>
+          <div class="metric"><strong>+200</strong><span>Pedidos mensuales</span></div>
+        </div>
+      </section>
+
+      <section class="section container reviews" id="opiniones">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Opiniones de clientes</p>
+            <h2>Lo que dicen las personas que ya compraron</h2>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <p>“Llegó muy rápido y la calidad es excelente. Me encantó el corte.”</p>
+            <strong>— Fernanda</strong>
+          </article>
+          <article class="review-card">
+            <p>“La experiencia de compra fue súper fácil, incluso desde el celular.”</p>
+            <strong>— Diego</strong>
+          </article>
+          <article class="review-card">
+            <p>“El estilo se siente premium, como una tienda de alto nivel.”</p>
+            <strong>— Camila</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container location" id="ubicacion">
+        <div class="location-card">
+          <div>
+            <p class="eyebrow">Ubicación</p>
+            <h2>Ubicación exacta</h2>
+            <p>Casa color esmeralda, 150 metros este de la plaza de deportes, a mano izquierda en Portalón.</p>
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Portal%C3%B3n&destination=Casa+color+esmeralda" target="_blank" rel="noreferrer" class="primary-btn">Ver en Google Maps</a>
+        </div>
+      </section>
+    </main>
+
+    <a href="https://wa.me/5215512345678?text=Hola%20quiero%20hacer%20un%20pedido" class="whatsapp-float" aria-label="Contactar por WhatsApp">💬</a>
+
+    <div id="loginModal" class="modal hidden">
+      <div class="modal-card">
+        <button class="close-btn" id="closeLogin">×</button>
+        <h3 id="authTitle">Ingreso de usuario</h3>
+        <p id="authInfo">Ingresa tu usuario. Si no tienes cuenta, regístrate.</p>
+        <form id="loginForm">
+          <div class="field">
+            <label for="loginUsername">Usuario</label>
+            <input type="text" id="loginUsername" placeholder="Usuario" required autocomplete="username" />
+          </div>
+          <div class="field hidden" id="passwordGroup">
+            <label for="loginPassword">Contraseña</label>
+            <div class="password-field">
+              <input type="password" id="loginPassword" placeholder="Contraseña" autocomplete="current-password" />
+              <button type="button" id="togglePassword" class="secondary-btn">Mostrar</button>
+            </div>
+          </div>
+          <div class="login-actions">
+            <button type="submit" class="primary-btn" id="submitButton">Ingresar</button>
+            <button type="button" class="secondary-btn" id="toggleRegister">Registrarse</button>
+          </div>
+          <p class="hint-text">¿No tienes cuenta? Usa "Registrarse" para crear una.</p>
+          <p id="loginError" class="form-feedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
